@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<style type="text/css">
+	.slide-container{
+		width: 1000px;
+		position: relative;
+		margin: auto;
+	}
+
+	.slides{
+		display: none;
+	}
+
+	.number{
+		position: absolute;
+		padding: 8px 12px;
+		color: white;
+	}
+	.text{
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		color: white;
+		padding: 8px 16px;
+		bottom: 16px;
+		font-size: 15px;
+
+	}
+	.pre,.nxt{
+		position: absolute;
+		top: 50%;
+		color: white;
+		font-weight: bold;
+		padding: 10px 10px;
+		font-size: 18px;
+		cursor: pointer;
+	}
+	.nxt{
+		right: 0px;
+	}
+	.pre:hover, .nxt:hover{
+		background-color: rgba(0,0,0,0.8);
+	}
+	.dots{
+		width: 8px;
+		height: 8px;
+		background: gray;
+		padding: 5px;
+		border-radius: 50%;
+		display: inline-block;
+		cursor: pointer;
+	}
+	.fade{
+		animation-name: fade;
+		animation-duration: 2s;
+	}
+	@keyframes fade{
+		from{opacity: 0.4}
+		to{opacity: 1}
+	}
+	.dots:hover{
+		background: #333;
+	}
+
+</style>
+</head>
+<body>
+
+	<div class="slide-container">
+		<div class="slides fade">
+			<div class="number">1/4</div>
+			<div><img src="images/slide1.jpg"></div>
+			<div class="text">Caption 1</div>
+		</div>
+		<div class="slides fade">
+			<div class="number">2/4</div>
+			<div><img src="images/slide2.jpg"></div>
+			<div class="text">Caption 2</div>
+		</div>
+		<div class="slides fade">
+			<div class="number">3/4</div>
+			<div><img src="images/slide3.jpg"></div>
+			<div class="text">Caption 3</div>
+		</div>
+		<div class="slides fade">
+			<div class="number">4/4</div>
+			<div><img src="images/slide4.jpg"></div>
+			<div class="text">Caption 4</div>
+		</div>
+		<a class="pre" onclick="plusIndex(-1)">&#10094;</a>
+		<a class="nxt" onclick="plusIndex(+1)">&#10095;</a>
+	</div>
+	<br>
+	<div style="text-align:center; ">
+		<span class="dots" onclick="currentSlide(1)"></span>
+		<span class="dots" onclick="currentSlide(2)"></span>
+		<span class="dots" onclick="currentSlide(3)"></span>
+		<span class="dots" onclick="currentSlide(4)"></span>
+	</div>
+	
+	<script type="text/javascript">
+		var slideIndex=1;
+		showImage(slideIndex);
+		function plusIndex(n){
+			showImage(slideIndex+=n);
+		}
+		function currentSlide(n){
+			showImage(slideIndex=n);
+		}
+		function showImage(n){
+			var slide=document.getElementsByClassName("slides");
+			if (n>slide.length) {slideIndex=1};
+			if (n<1) {slideIndex=slide.length};
+			for (var i = 0; i<slide.length; i++) {
+				slide[i].style.display="none";
+			};
+			slide[slideIndex-1].style.display="block";
+		}
+
+	</script>
+</body>
+</html>
