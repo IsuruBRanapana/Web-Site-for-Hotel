@@ -4,10 +4,73 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 <style type="text/css">
+	body{
+	background-image: url(file:///C:/Users/DELL/Desktop/Projecthtml/Images/bg-body.jpg);
+	margin-left: 150px;
+	margin-right: 150px;
+	margin-top:0px;
+	}
+	body div{
+	background-color:#C7F4F8;
+	}
+
+	.login{
+	font-family:"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, "sans-serif";
+	font-size: 15px;
+	margin-top:0px;
+	margin-right: 10px;
+	float: right;
+	color: white;
+	background-image: url(file:///C:/Users/DELL/Desktop/Projecthtml/Images/bg-body.jpg);
+	}
+
+	.login a:hover{
+	color: white;
+	background-color: #734D20;
+	}
+
+	.nav{
+	margin-top: 0px;
+	color: #D7A345;
+	
+	}
+
+	.nav ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	color:#232222;
+	background-color:#D7A345;
+	}
+
+	.nav ul li{
+	font-size: 20px;
+	display: inline;
+	text-decoration: none;
+	vertical-align: middle;
+	}
+
+	.nav ul li a{
+	text-align:center;
+	line-height: 30px;
+	padding: 8px;
+	color: #272727;
+	text-decoration: none;
+	vertical-align: middle;
+	margin-right: 25px;
+	margin-left: 105px;
+	box-sizing: border-box;
+	}
+	.nav ul li a:hover{
+	color: aliceblue;
+	}
+
 	.slide-container{
 		width: 1000px;
 		position: relative;
-		margin: auto;
+		margin-top:20px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.slides{
@@ -68,58 +131,80 @@
 </style>
 </head>
 <body>
-
-	<div class="slide-container">
-		<div class="slides fade">
-			<div class="number">1/4</div>
-			<div><img src="images/slide1.jpg"></div>
-			<div class="text">Caption 1</div>
-		</div>
-		<div class="slides fade">
-			<div class="number">2/4</div>
-			<div><img src="images/slide2.jpg"></div>
-			<div class="text">Caption 2</div>
-		</div>
-		<div class="slides fade">
-			<div class="number">3/4</div>
-			<div><img src="images/slide3.jpg"></div>
-			<div class="text">Caption 3</div>
-		</div>
-		<div class="slides fade">
-			<div class="number">4/4</div>
-			<div><img src="images/slide4.jpg"></div>
-			<div class="text">Caption 4</div>
-		</div>
-		<a class="pre" onclick="plusIndex(-1)">&#10094;</a>
-		<a class="nxt" onclick="plusIndex(+1)">&#10095;</a>
+	<div>
+	<div class="login" style="position: absolute; margin-top: 0px; margin-left: 75%">
+		<a href="#"><font color="#2E4053">Sign Up</font></a><span>|</span><a href="#"><font color="#2E4053">Log In</font></a>
 	</div>
-	<br>
-	<div style="text-align:center; ">
-		<span class="dots" onclick="currentSlide(1)"></span>
-		<span class="dots" onclick="currentSlide(2)"></span>
-		<span class="dots" onclick="currentSlide(3)"></span>
-		<span class="dots" onclick="currentSlide(4)"></span>
+	<div class="upper">
 	</div>
-	
-	<script type="text/javascript">
-		var slideIndex=1;
-		showImage(slideIndex);
-		function plusIndex(n){
-			showImage(slideIndex+=n);
-		}
-		function currentSlide(n){
-			showImage(slideIndex=n);
-		}
-		function showImage(n){
-			var slide=document.getElementsByClassName("slides");
-			if (n>slide.length) {slideIndex=1};
-			if (n<1) {slideIndex=slide.length};
-			for (var i = 0; i<slide.length; i++) {
-				slide[i].style.display="none";
-			};
-			slide[slideIndex-1].style.display="block";
-		}
+	<div class="nav" style="margin-top: 20px;">
+		<ul>
+			<li><a href="">Home</a></li>
+			<li><a href="">Events</a></li>
+			<li><a href="">Pictures</a></li>
+			<li><a href="">Booking</a></li>
+			<li><a href="">About Me</a></li>
+		</ul>
+	</div>
+	<table>
+		<tr>
+			<td>
 
-	</script>
+				<div class="slide-container">
+					<div class="slides fade">
+						<div class="number">1/4</div>
+						<div><img src="images/slide1.jpg"></div>
+						<div class="text">Caption 1</div>
+					</div>
+					<div class="slides fade">
+						<div class="number">2/4</div>
+						<div><img src="images/slide2.jpg"></div>
+						<div class="text">Caption 2</div>
+					</div>
+					<div class="slides fade">
+						<div class="number">3/4</div>
+						<div><img src="images/slide3.jpg"></div>
+						<div class="text">Caption 3</div>
+					</div>
+					<div class="slides fade">
+						<div class="number">4/4</div>
+						<div><img src="images/slide4.jpg"></div>
+						<div class="text">Caption 4</div>
+					</div>
+					<a class="pre" onclick="plusIndex(-1)">&#10094;</a>
+					<a class="nxt" onclick="plusIndex(+1)">&#10095;</a>
+				</div>
+				<br>
+				<div style="text-align:center; ">
+					<span class="dots" onclick="currentSlide(1)"></span>
+					<span class="dots" onclick="currentSlide(2)"></span>
+					<span class="dots" onclick="currentSlide(3)"></span>
+					<span class="dots" onclick="currentSlide(4)"></span>
+				</div>
+				
+				<script type="text/javascript">
+					var slideIndex=1;
+					showImage(slideIndex);
+					function plusIndex(n){
+						showImage(slideIndex+=n);
+					}
+					function currentSlide(n){
+						showImage(slideIndex=n);
+					}
+					function showImage(n){
+						var slide=document.getElementsByClassName("slides");
+						if (n>slide.length) {slideIndex=1};
+						if (n<1) {slideIndex=slide.length};
+						for (var i = 0; i<slide.length; i++) {
+							slide[i].style.display="none";
+						};
+						slide[slideIndex-1].style.display="block";
+					}
+
+				</script>
+			</td>
+		</tr>
+	</table>
+</div>
 </body>
 </html>

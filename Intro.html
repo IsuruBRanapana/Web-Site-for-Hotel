@@ -20,10 +20,59 @@
 			<li><a href="">About Me</a></li>
 		</ul>
 	</div>
-	<div id="container">
-		<img src="Images/Front.jpg">
-		<img src="Images/Front1.jpg">
-		<img src="Images/Front2.jpg">
+	<br>
+	<br>
+	<div class="slide-container" style="align:center;">
+		<div class="slides fade">
+			<div class="number">1/4</div>
+			<div><img src="images/slide1.jpg"></div>
+			<div class="text">Caption 1</div>
+		</div>
+		<div class="slides fade">
+			<div class="number">2/4</div>
+			<div><img src="images/slide2.jpg"></div>
+			<div class="text">Caption 2</div>
+		</div>
+		<div class="slides fade">
+			<div class="number">3/4</div>
+			<div><img src="images/slide3.jpg"></div>
+			<div class="text">Caption 3</div>
+		</div>
+		<div class="slides fade">
+			<div class="number">4/4</div>
+			<div><img src="images/slide4.jpg"></div>
+			<div class="text">Caption 4</div>
+		</div>
+		<a class="pre" onclick="plusIndex(-1)">&#10094;</a>
+		<a class="nxt" onclick="plusIndex(+1)">&#10095;</a>
 	</div>
+	<p style="background-color: #C7F4F8;"><br></p>
+	<div style="text-align:center; ">
+		<span class="dots" onclick="currentSlide(1)"></span>
+		<span class="dots" onclick="currentSlide(2)"></span>
+		<span class="dots" onclick="currentSlide(3)"></span>
+		<span class="dots" onclick="currentSlide(4)"></span>
+	</div>
+	<script type="text/javascript">
+		var slideIndex=1;
+		showImage(slideIndex);
+		function plusIndex(n){
+			showImage(slideIndex+=n);
+		}
+		function currentSlide(n){
+			showImage(slideIndex=n);
+		}
+		function showImage(n){
+			var slide=document.getElementsByClassName("slides");
+			if (n>slide.length) {slideIndex=1};
+			if (n<1) {slideIndex=slide.length};
+			for (var i = 0; i<slide.length; i++) {
+				slide[i].style.display="none";
+			};
+			slide[slideIndex-1].style.display="block";
+		}
+
+	</script>
+	
 </body>
 </html>

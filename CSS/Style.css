@@ -108,18 +108,71 @@ body div{
 	border-color:black;
 }
 
+#introtable{
+	margin-left: auto;
+	margin-right: auto;
+}
+
 -------------------------intro------------
+.slide-container{
+		width: 1000px;
+		position: relative;
+		margin-top:30px;
+		margin-right: auto;
+		margin-left: auto;
+	}
 
-#container{
-	width: 80%;
-	height: 450px;
-	border:1px solid black;
-	margin: 0px auto;
-	position: relative;
-}
+	.slides{
+		display: none;
+	}
 
-#container>img{
-	width: 100%;
-	height: 100%;
-	position: absolute;
-}
+	.number{
+		position: absolute;
+		padding: 8px 12px;
+		color: white;
+	}
+	.text{
+		text-align: center;
+		position: absolute;
+		width: 100%;
+		color: white;
+		padding: 8px 16px;
+		bottom: 16px;
+		font-size: 15px;
+
+	}
+	.pre,.nxt{
+		position: absolute;
+		top: 50%;
+		color: white;
+		font-weight: bold;
+		padding: 10px 10px;
+		font-size: 18px;
+		cursor: pointer;
+	}
+	.nxt{
+		right: 0px;
+	}
+	.pre:hover, .nxt:hover{
+		background-color: rgba(0,0,0,0.8);
+	}
+	.dots{
+		width: 8px;
+		height: 8px;
+		background: gray;
+		padding: 5px;
+		border-radius: 50%;
+		display: inline-block;
+		cursor: pointer;
+	}
+	.fade{
+		animation-name: fade;
+		animation-duration: 2s;
+	}
+	@keyframes fade{
+		from{opacity: 0.4}
+		to{opacity: 1}
+	}
+	.dots:hover{
+		background: #333;
+	}
