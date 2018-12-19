@@ -116,10 +116,9 @@ body div{
 -------------------------intro------------
 .slide-container{
 		width: 1000px;
-		position: relative;
+		position:absolute;
 		margin-top:30px;
-		margin-right: auto;
-		margin-left: auto;
+		margin-left: 100px;
 	}
 
 	.slides{
@@ -151,7 +150,7 @@ body div{
 		cursor: pointer;
 	}
 	.nxt{
-		right: 0px;
+		right: 270px;
 	}
 	.pre:hover, .nxt:hover{
 		background-color: rgba(0,0,0,0.8);
@@ -175,4 +174,13 @@ body div{
 	}
 	.dots:hover{
 		background: #333;
+	}
+
+	.slidetable{
+		margin-right: auto;
+		margin-left: auto;
+		border-size:8px;
+		border:solid;
+		border-color:black;
+
 	}
