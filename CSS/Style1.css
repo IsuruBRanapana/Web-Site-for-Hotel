@@ -83,3 +83,9 @@
 .loginbox a:hover{
 	color: #ffc107;	
 }
+
+------------------booking---------------------
+
+.bookingform{
+	left: 50%;
+}

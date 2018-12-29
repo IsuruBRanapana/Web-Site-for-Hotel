@@ -273,6 +273,7 @@ body{
 	background:transparent;
 	outline: none;
 	height: 40px; 
+	color: white;
 }
 
 .loginbox input[type="submit"]{
@@ -300,4 +301,9 @@ body{
 
 .loginbox a:hover{
 	color: #ffc107;	
+}
+
+----------------- booking ---------------------
+.booktable{
+	left: 50%;
 }
